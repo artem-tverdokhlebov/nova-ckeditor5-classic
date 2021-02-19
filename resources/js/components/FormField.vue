@@ -20,7 +20,6 @@
 import { FormField, HandlesValidationErrors } from 'laravel-nova'
 import CKEditor from '@ckeditor/ckeditor5-vue'
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
-import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import NovaCKEditor5UploadAdapter from '../ckeditor5/upload-adapter'
 
 import '@ckeditor/ckeditor5-build-classic/build/translations/ru';
@@ -48,14 +47,10 @@ export default {
                 heading: this.field.options.heading,
                 image: this.field.options.image,
                 fontFamily: this.field.options.fontFamily,
-                alignment: this.field.options.alignment,
                 extraPlugins: [
                     this.createUploadAdapterPlugin
                 ],
-                link: this.field.options.link,
-                plugins: [
-                    Alignment
-                ]
+                link: this.field.options.link
             }
         }
     },
