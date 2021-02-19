@@ -40,7 +40,7 @@ export default {
                     field: this.field,
                     draftId: uuidv4()
                 },
-                language: 'en',
+                language: this.field.options.language,
                 toolbar: this.field.options.toolbar,
                 heading: this.field.options.heading,
                 image: this.field.options.image,
